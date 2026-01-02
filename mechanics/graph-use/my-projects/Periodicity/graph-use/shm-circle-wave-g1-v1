@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+
+\begin{center}
+\begin{tikzpicture}[scale=1]
+\hspace*{-2.5cm};
+% =========================
+% LEFT : REFERENCE CIRCLE
+% =========================
+\draw[thick] (-4,0) circle (2);
+
+
+% Axes inside circle
+\draw[thick] (-6,0) -- (-2,0);
+\draw[thick] (-4,-2) -- (-4,2);
+
+% Labels
+\node[color=red,above] at (-4,2) {$\frac{T}{4}$};
+\node[color=red,left]  at (-6,0) {$\frac{T}{2}$};
+\node[color=red,below] at (-4,-2) {$\frac{3T}{4}$};
+\node[color=red,right] at (-2,0) {$T$};
+
+\node[right] at (-4.8,2.9) {Extreme position};
+\node[right] at (-4.8,-2.9) {Extreme};
+\node[rotate=90,right] at (-6.7,-1.1) {Mean Position};
+\node[rotate=90,right] at (-1.0,-0.5) {Mean};
+
+% =========================
+% RIGHT : DISPLACEMENT-TIME GRAPH
+% =========================
+
+% Axes
+\hspace*{2.5cm};
+\draw[thick,->] (0,-2.5) -- (0,2.5);
+\draw[thick,->] (0,0) -- (9,0);
+
+\node[left] at (0,2) {$A$};
+\node[left] at (0,-2) {$-A$};
+
+\node[below] at (8.8,-0.3) {time $(t)$};
+\node[rotate=90] at (-0.7,0) {Displacement $(x)$};
+
+% Sine wave
+\draw[thick,domain=0:8,smooth,variable=\x]
+plot ({\x},{2*sin(45*\x)});
+
+% Time markings
+\draw (2,0.1)--(2,-0.1);
+\draw (4,0.1)--(4,-0.1);
+\draw (6,0.1)--(6,-0.1);
+\draw (8,0.1)--(8,-0.1);
+
+\node[color=red,above] at (2,1.8) {$\frac{T}{4}$};
+\node[color=red,below] at (4,-0.4) {$\frac{T}{2}$};
+\node[color=red,below] at (6,-2.1) {$\frac{3T}{4}$};
+\node[color=red,above] at (8,0.2) {$T$};
+
+\end{tikzpicture}
+\end{center}
+\end{document}
