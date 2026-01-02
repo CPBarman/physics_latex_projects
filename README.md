@@ -5,7 +5,7 @@ This repository contains physics notes and academic materials written entirely i
 
 
 ## Areas Covered
-- Classical Mechanics
+- Mechanics
 - Quantum Mechanics
 
 
